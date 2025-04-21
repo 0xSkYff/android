@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="13dp"
+        android:text="@string/header_name"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroup2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_calculate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="calculate"
+        android:text="@string/btn_calculator"
+        app:layout_constraintBottom_toTopOf="@+id/result"
+        app:layout_constraintStart_toStartOf="@+id/second_operator"
+        app:layout_constraintTop_toBottomOf="@+id/second_operator" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="170dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="380dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_calculate" />
+
+    <EditText
+        android:id="@+id/first_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/first_operator"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/second_operator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/second_operator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="@string/second_operator"
+        android:inputType="text"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/button_calculate"
+        app:layout_constraintStart_toStartOf="@+id/first_operator"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="27dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/second_operator"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_title">
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="91dp"
+            android:layout_height="23dp"
+            android:checked="true"
+            android:text="@string/symbol1" />
+
+        <RadioButton
+            android:id="@+id/radioButton6"
+            android:layout_width="102dp"
+            android:layout_height="23dp"
+            android:layout_marginEnd="4dp"
+            android:text="@string/symbol2" />
+
+        <RadioButton
+            android:id="@+id/radioButton7"
+            android:layout_width="88dp"
+            android:layout_height="30dp"
+            android:text="@string/symbol3" />
+
+        <RadioButton
+            android:id="@+id/radioButton8"
+            android:layout_width="92dp"
+            android:layout_height="35dp"
+            android:text="@string/symbol4" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

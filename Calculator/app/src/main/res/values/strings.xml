@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="header_name"> Calculadora </string>
+    <string name="first_operator">10 </string>
+    <string name="second_operator">20 </string>
+    <string name="btn_calculator"> Calculate</string>
+    <string name="symbol1"> +  </string>
+    <string name="symbol2"> - </string>
+    <string name="symbol3"> x </string>
+    <string name="symbol4"> / </string>
+</resources>
